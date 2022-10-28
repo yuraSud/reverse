@@ -21,9 +21,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func buttonAction(_ sender: Any) {
         if textField.text == "" {
-            return labelText.text = "Input Your text, Please"
+            return labelText.text = "INPUT Your text, Please"
         } else if let text = textField.text {
             labelText.text = String(text.reversed())
+            
             textField.text = ""
             textField.resignFirstResponder()
         }
