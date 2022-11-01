@@ -20,30 +20,36 @@
                                 <rect key="frame" x="16" y="20" width="343" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Qgs-YJ-Sll"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-a1-5QS">
-                                <rect key="frame" x="127.5" y="79" width="120" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="UvL-a1-5QS" secondAttribute="height" multiplier="3:1" id="M04-a2-HCm"/>
-                                    <constraint firstAttribute="height" constant="40" id="zr7-hk-bfG"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Enter"/>
-                                <connections>
-                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XN8-LN-Qx8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yv-sS-31f">
-                                <rect key="frame" x="16" y="139" width="343" height="0.0"/>
+                                <rect key="frame" x="16" y="94" width="343" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-a1-5QS">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zr7-hk-bfG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Reverse"/>
+                                <state key="highlighted" title="Clear">
+                                    <color key="titleColor" red="1" green="0.3177051863" blue="0.1882209239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.3177051863" blue="0.1882209239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XN8-LN-Qx8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,15 +58,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FBF-26-4Gn" secondAttribute="trailing" constant="16" id="74w-MP-r7k"/>
                             <constraint firstItem="FBF-26-4Gn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8yt-1L-KlB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7yv-sS-31f" secondAttribute="trailing" constant="16" id="MpS-hZ-EwA"/>
-                            <constraint firstItem="UvL-a1-5QS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rnx-ex-5ws"/>
                             <constraint firstItem="FBF-26-4Gn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wfk-H2-LVq"/>
-                            <constraint firstItem="UvL-a1-5QS" firstAttribute="top" secondItem="FBF-26-4Gn" secondAttribute="bottom" constant="25" id="Zwu-HH-suX"/>
-                            <constraint firstItem="7yv-sS-31f" firstAttribute="top" secondItem="UvL-a1-5QS" secondAttribute="bottom" constant="20" id="kMf-j4-rTo"/>
+                            <constraint firstItem="7yv-sS-31f" firstAttribute="top" secondItem="FBF-26-4Gn" secondAttribute="bottom" constant="40" id="aU2-KC-3Au"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UvL-a1-5QS" secondAttribute="bottom" constant="20" id="cXP-zi-kzL"/>
+                            <constraint firstItem="UvL-a1-5QS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f7R-ft-J3M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UvL-a1-5QS" secondAttribute="trailing" constant="20" id="olk-1b-Ajg"/>
                             <constraint firstItem="7yv-sS-31f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xqM-QJ-Mdt"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="BwE-sL-O0b" appends="YES" id="qdU-vc-Czj"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="enterButton" destination="UvL-a1-5QS" id="VZy-FS-Snt"/>
@@ -69,11 +73,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="BwE-sL-O0b">
-                    <connections>
-                        <action selector="tap:" destination="BYZ-38-t0r" id="bBg-3X-Pkw"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-494" y="73"/>
         </scene>
@@ -83,8 +82,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

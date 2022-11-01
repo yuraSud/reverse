@@ -15,32 +15,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-    
+       super.viewDidLoad()
+        
     }
 
     @IBAction func buttonAction(_ sender: Any) {
         if textField.text == "" {
-            return labelText.text = "INPUT Your text, Please"
+            return labelText.text = "Input Your text, Please"
         } else if let text = textField.text {
-            labelText.text = String(text.reversed())
-            
+            labelText.text = reverceText(text: text)
             textField.text = ""
             textField.resignFirstResponder()
         }
     }
     
-    @IBAction func tap(_ sender: Any) {
-        textField.resignFirstResponder()
-    }
-    
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        buttonAction(self)
+        view.endEditing(true)
         return true
     }
-        
-   
-    
+    func reverceText(text: String) -> String {
+        let textArray = text.split(separator: " ")
+        //, omittingEmptySubsequences: false)
+        var finalText = ""
+        for words in textArray {
+            finalText.append(contentsOf: words.reversed())
+            finalText.append(" ")
+        }
+       return finalText
+    }
 }
 
